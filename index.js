@@ -6,6 +6,7 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 import dbConnect from "./config/db.js";
  import productRouter from "./routes/productRoute.js";
+ import userRouter from "./routes/userRoute.js";
 import { storeRouter } from "./routes/storeRoute.js";
 const app = express();
 dotenv.config()
@@ -27,7 +28,7 @@ app.use(
 app.use("/", storeRouter);
 // app.use("/auth", authRouter);
  app.use("/products", productRouter);
-// app.use("/users", userRouter);
+app.use("/users", userRouter);
 const startServer=async ()=>{
      await dbConnect()
 
