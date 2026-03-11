@@ -11,7 +11,7 @@
     <ol>
     <% users.forEach(user => { %>
         <li><%= user.name %>-
-            <%=user.email %>-
+            <%= user.email %>-
             <%= user.password %>-
             <%= user.role %>-
             <a href="/users/<%= user._id %>/edit">Edit</a>-
