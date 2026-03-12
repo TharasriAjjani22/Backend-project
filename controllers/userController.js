@@ -1,5 +1,5 @@
 import userModel from "../models/userModel.js";
-import bcrypt from "bcrypt"
+import bcrypt from "bcrypt";
 const getusers = async (req, res) => {
   const users = await userModel.find();
   res.render("users/index", { users });
